@@ -6,5 +6,5 @@ RUN native-image --no-server -cp build/libs/java-graal-*-all.jar
 
 FROM frolvlad/alpine-glibc
 EXPOSE 8080
-COPY --from=graalvm /home/app/java-graal .
+COPY --from=graalvm /home/app/java-graal/java-graal .
 ENTRYPOINT ["./java-graal"]
